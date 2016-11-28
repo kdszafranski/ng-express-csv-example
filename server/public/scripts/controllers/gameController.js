@@ -1,25 +1,27 @@
 colorBlocks.controller('GameController', ['$scope', function($scope) {
 
 console.log('game controller running');
-$scope.colors = ['red', 'blue', 'papayawhip', 'green'];
+
+var self = this;
+self.colors = ['red', 'blue', 'magenta', 'green', 'pink'];
 
 // start game
 init();
 
 // resets game to the starting state
 function init() {
-  $scope.messageText = "";
-  $scope.currentColor = $scope.colors[randomNumber(0, $scope.colors.length - 1)];
-  $scope.colorPrompt = 'Can you find the ' + $scope.currentColor + ' block?'
+  self.messageText = "";
+  self.currentColor = self.colors[randomNumber(0, self.colors.length - 1)];
+  self.colorPrompt = 'Can you find the ' + self.currentColor + ' block?'
 }
 
 // click handler for guessing colors
-$scope.handleInput = function(clickedColor) {
-  if(clickedColor === $scope.currentColor) {
+self.handleInput = function(clickedColor) {
+  if(clickedColor === self.currentColor) {
     alert('You got it!\n\nNow try another!');
     init();
   } else {
-    $scope.messageText = 'Oh no! You guessed wrong!';
+    self.messageText = 'Oh no! You guessed wrong!';
   }
 }
 

@@ -5,11 +5,13 @@ colorBlocks.config(['$routeProvider', function($routeProvider) {
     $routeProvider
         .when('/play', {
             templateUrl: '/views/templates/gameview.html',
-            controller: 'GameController'
+            controller: 'GameController',
+            controllerAs: 'game'
         })
         .when('/config', {
             templateUrl: '/views/templates/configview.html',
-            controller: 'SettingsController'
+            controller: 'SettingsController',
+            controllerAs: 'settings'
         })
         .otherwise({
             redirectTo: '/play'
