@@ -1,4 +1,4 @@
-colorBlocks.controller('GameController', ['$scope', function($scope) {
+colorBlocks.controller('GameController', function() {
 
 console.log('game controller running');
 
@@ -29,4 +29,4 @@ self.handleInput = function(clickedColor) {
 function randomNumber(min, max){
     return Math.floor(Math.random() * (1 + max - min) + min);
 }
-}]);
+});
