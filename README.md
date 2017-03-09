@@ -13,11 +13,12 @@ NPM scripts for start and test. `npm test` runs modemon.
 
 ## How To Use
 
-This repo is intended as a bare-bones starting point.
+This repo is intended as a bare-bones starting point. All you need is the files, not the git history or a connection to this remote repo.
 
-1. Download the zip file
-2. Run `git init` to start your new project
+1. Download the zip file and unzip
+2. Change directory to this new folder
 3. Run `npm install` to download the dependencies
-4. You're ready to start coding your own project
+4. Run `git init` to start tracking your new project code
+5. You're ready to start coding your own project
 
 **You will need to set up your own Github repo and connect it as a remote repo.**
