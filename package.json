@@ -1,7 +1,7 @@
 {
-  "name": "ng-color-blocks",
+  "name": "prime-boiler-node-angular",
   "version": "1.0.0",
-  "description": "color block game in angular",
+  "description": "Boilerplate starting point for node, express, angular apps",
   "main": "server/app.js",
   "scripts": {
     "test": "nodemon server/app.js",
