@@ -1,19 +1,19 @@
-var colorBlocks = angular.module('colorBlocks', ['ngRoute']);
+var myApp = angular.module('myApp', ['ngRoute']);
 
-colorBlocks.config(['$routeProvider', function($routeProvider) {
+myApp.config(['$routeProvider', function($routeProvider) {
 
     $routeProvider
-        .when('/play', {
-            templateUrl: '/views/templates/gameview.html',
-            controller: 'GameController',
-            controllerAs: 'game'
+        .when('/home', {
+            templateUrl: '/views/templates/home.html',
+            controller: 'HomeController',
+            controllerAs: 'hc'
         })
-        .when('/config', {
-            templateUrl: '/views/templates/configview.html',
-            controller: 'SettingsController',
-            controllerAs: 'settings'
+        .when('/other', {
+            templateUrl: '/views/templates/other.html',
+            controller: 'OtherController',
+            controllerAs: 'oc'
         })
         .otherwise({
-            redirectTo: '/play'
+            redirectTo: 'home'
         });
 }]);
