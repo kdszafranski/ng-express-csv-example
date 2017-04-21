@@ -6,7 +6,15 @@ var csv = require('express-csv');
 // Serve back static files
 app.use(express.static('./server/public'));
 
+// code from Christian Cupboard Sigma project
+// Angular side
+// https://github.com/jasunde/christian-cupboard/blob/64a5994f42042c9cd147c20eddcf382507b03bb3/public/app/services/distribution.factory.js#L148
+
+// Server side
+// https://github.com/jasunde/christian-cupboard/blob/64a5994f42042c9cd147c20eddcf382507b03bb3/server/routes/distributions.js#L191
+
 app.get('/getcsv', function(req, res) {
+  // this would be your returned find() object 
   var mongoObject = {
     _id: '1234',
     firstName: 'First',
